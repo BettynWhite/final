@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Background */
+.background-container {
+    width: 100vw;
+    height: 2110px;
+    background-image: url('eephotos/towntrue.jpg');
+    background-size: 1440px 2110px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Mr Roboto */
+.fixed-image {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    z-index: 100;
+}
+
+/* Mission */
+.fixed-text {
+    position: fixed;
+    top: 55px;
+    left: 320px; /* Slightly adjusted based on image width */
+    color: #aef4ff; /* Light blue color */
+    font-family: 'Source Code Variable', monospace;
+    font-size: 14pt;
+    z-index: 100;
+}
+
+/* target */
+.target-image {
+    position: fixed;
+    bottom: 35px;
+    right: 10px;
+    width: 100px; /* Adjust as necessary */
+    height: 100px; /* Adjust as necessary */
+    border: 2px solid #aef4ff; /* Light blue color border */
+    z-index: 101;
+}
+
+.target-info {
+    position: fixed;
+    bottom: 10px;
+    right: 120px; /* Right of the image */
+    color: #aef4ff; /* Light blue color */
+    font-family: 'Source Code Variable', monospace;
+    font-size: 14pt;
+    z-index: 101;
+    /* background-color: black; 
+    padding: 5px; */
+    white-space: pre-wrap; /* Keeps your formatting with line breaks */
+}
+
+.background-container {
+    position: relative;
+    /* Other styles remain the same */
+}
+
+.overlay-link {
+    position: absolute;
+    color: #aef4ff; /* Light blue color */
+    text-decoration: underline;
+    font-family: 'Source Code Variable', monospace;
+    font-size: 14pt;
+    background-color: black;
+    padding: 5px;
+    z-index: 10; /* Ensure this is above the background image z-index */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+.overlay-link:hover {
+    background-color: #aef4ff; /* Light blue background on hover */
+    color: black; /* Black text color on hover */
+}

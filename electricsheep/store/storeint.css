@@ -1,0 +1,99 @@
+/* Base settings for HTML and Body: Full height, no margin, no padding */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /* Prevents scrolling */
+}
+
+/* Full viewport background image */
+body {
+    background-image: url('../eephotos/storee.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Container for the images at the top left */
+.top-right-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Width of the stacked images */
+    height: 400px; /* Total height of both images */
+    z-index: 5;  /* Ensure it's above normal content but below the menu and Mr. Roboto */
+}
+
+/* Style for image links */
+.image-link img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Scale images on hover */
+.image-link:hover img {
+    transform: scale(1.1); /* Enlarges the image by 10% */
+}
+
+/* Style for Mr. Roboto image fixed to the top right corner */
+.mr-roboto {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    display: block; /* Ensures the image is properly displayed */
+    z-index: 10; /* Higher z-index to ensure it's above the interact-menu */
+}
+
+/* New interact menu styles */
+.interact-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%; /* Covers one fourth of the right side of the viewport */
+    height: 100%;
+    background-color: black;
+    padding-top: 300px; /* Space at the top */
+    z-index: 8; /* High enough to overlay the content but below Mr. Roboto */
+}
+
+.menu-link {
+    display: block;
+    color: #aef4ff; /* Light blue color */
+    font-family: 'Source Code Variable', monospace;
+    text-decoration: underline;
+    font-size: 14pt;
+    text-align: center;
+    margin: 20px; /* Vertical spacing */
+}
+
+.menu-link:hover {
+    color: white; /* Color changes to white on hover */
+}
+
+.menu-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #aef4ff;
+    font-family: 'Source Code Variable', monospace;
+    font-size: small;
+    padding: 10px;
+}
+.store-greeting {
+    position: fixed;
+    bottom: 20%; /* Positioned towards the lower part of the viewport */
+    left: 5%; /* Slightly off-center to the left */
+    background-color: black;
+    color: #aef4ff; /* Light blue color as specified */
+    font-family: 'Source Code Variable', monospace;
+    font-size: 12pt; /* Slightly smaller text */
+    padding: 10px 20px; /* Padding around the text for spacing */
+    border-radius: 8px; /* Rounded corners for the text box */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    z-index: 20; /* Ensures it is on top of other elements */
+}

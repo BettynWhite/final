@@ -1,0 +1,47 @@
+/* Base settings for HTML and Body: Full height, no margin, no padding */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /* Prevents scrolling */
+}
+
+/* Full viewport background image */
+body {
+    background-image: url('../eephotos/tvguy.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Container for the images at the top left */
+.top-right-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Width of the stacked images */
+    height: 400px; /* Total height of both images */
+}
+
+/* Style for image links */
+.image-link img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Scale images on hover */
+.image-link:hover img {
+    transform: scale(1.1); /* Enlarges the image by 10% */
+}
+
+/* Style for Mr. Roboto image fixed to the top right corner */
+.mr-roboto {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    display: block; /* Ensures the image is properly displayed */
+}
